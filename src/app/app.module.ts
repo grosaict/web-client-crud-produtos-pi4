@@ -17,6 +17,8 @@ import { MoedaPipe } from './moeda.pipe';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductService } from './product.service';
+import { PriceFilterPipe } from './price-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ProductsComponent } from './products/products.component';
     FooterComponent,
     LoginComponent,
     ProductsComponent,
-    MoedaPipe
+    MoedaPipe,
+    PriceFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { ProductsComponent } from './products/products.component';
     AppRoutingModule,
     HomeModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
