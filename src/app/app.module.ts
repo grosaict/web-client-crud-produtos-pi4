@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
@@ -19,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductService } from './product.service';
 import { PriceFilterPipe } from './price-filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { PriceFilterPipe } from './price-filter.pipe';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    HttpClientModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
